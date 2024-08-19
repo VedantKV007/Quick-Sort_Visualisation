@@ -56,6 +56,8 @@ void bubbleSort(std::vector<Rectangle>& rectHolder, RenderTexture& renderTexture
 }
 
 int main() {
+
+
     srand(static_cast<unsigned>(time(nullptr)));
 
     const int width = 1000;
@@ -73,8 +75,11 @@ int main() {
 
     bool isSorting = false;
 
+    std::cout << "Press space to begin";
+
     while (window.isOpen()) {
         Event event;
+        
         while (window.pollEvent(event)) {
             if (event.type == Event::Closed) {
                 window.close();
